@@ -26,8 +26,8 @@ class PatientController extends Controller
     {
         $validated = $request->validate([
             'name' => ['required', 'string', 'max:255'],
-            'age' => ['nullable', 'integer', 'min:0', 'max:150'],
-            'gender' => ['nullable', 'string', 'max:50'],
+            'age' => ['required', 'integer', 'min:1', 'max:150'],
+            'gender' => ['required', 'string', 'max:50'],
             'contact_number' => ['nullable', 'string', 'max:20'],
             'address' => ['nullable', 'string'],
         ]);
@@ -55,8 +55,8 @@ class PatientController extends Controller
     {
         $validated = $request->validate([
             'name' => ['required', 'string', 'max:255'],
-            'age' => ['nullable', 'integer', 'min:0', 'max:150'],
-            'gender' => ['nullable', 'string', 'max:50'],
+            'age' => ['required', 'integer', 'min:1', 'max:150'],
+            'gender' => ['required', 'string', 'max:50'],
             'contact_number' => ['nullable', 'string', 'max:20'],
             'address' => ['nullable', 'string'],
         ]);
